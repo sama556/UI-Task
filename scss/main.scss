@@ -1,0 +1,15 @@
+@use 'abstract/variables' as *;
+@use 'vendor/bootstrap/bootstrap' as *;
+@use 'base/reset';
+@use 'layout/sidebar';
+@use 'layout/footer';
+@use 'layout/rtl.scss';
+@use'layout/_cart.scss';
+@use 'components/_categories';
+@use 'components/filters';
+@use 'components/cards';
+@use 'components/pack';
+@use 'components/_offers.scss'
+
+
+

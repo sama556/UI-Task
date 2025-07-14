@@ -1,0 +1,215 @@
+ @use '../abstract/variables' as *;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  overflow: scroll;
+  background-color: $white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left $transition-fast;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+
+  &.active {
+    left: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $main-font-color;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .sidebar-header {
+    padding: 2rem 1.5rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color:$description-color ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+  }
+
+  .user-info {
+    .user-name {
+      font-family: $font-family-primary;
+      font-weight: 600;
+      font-size: 1rem;
+      color: $main-font-color;
+      margin: 0;
+    }
+
+  }
+
+  .sidebar-menu {
+    flex: 1;
+    padding: 1rem 0;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      padding: 0.5rem 1.5rem;
+      text-decoration: none;
+      color: $main-font-color;
+      font-weight: $font-weight-medium;
+      font-family: $font-family-primary;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 1rem;
+      transition: all $transition-fast;
+
+      i {
+        font-size: $spacing-lg;
+        width: 20px;
+        color: $main-color;
+      }
+
+      &:hover {
+        background-color: $offer-section;
+        color: $main-color;
+
+        i {
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  .sidebar-footer {
+    padding: 1rem 1.5rem 2rem;
+    border-top: 1px solid #f0f0f0;
+
+    .footer-links {
+      margin-bottom: 1rem;
+
+      a {
+        display: block;
+        color: $main-font-color;
+        text-decoration: none;
+        font-family: $font-family-primary;
+        font-size: 0.875rem;
+        font-weight: $font-weight-medium;
+        margin-bottom: 0.25rem;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+
+    .download-text {
+      font-family: $font-family-primary;
+      font-size: 0.75rem;
+      color: $description-color;
+      margin-bottom: 0.25rem;
+    }
+
+    .download-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .download-btn img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-fast;
+  z-index: 1040;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.navbar {
+  font-family: $font-family-primary;
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $footer-color;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  i {
+    color: $main-font-color;
+  }
+}
+
+.form-control {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: $border-radius-md;
+}
+.buttons{
+background-color:rgba(245, 245, 245, 1);
+border-radius: $border-radius-lg;
+}
+
+.btn-outline-secondary {
+  color: $main-font-color;
+  border-color: $offer-section;
+  font-size: 0.875rem;
+  border-radius: $border-radius-md;
+  background-color: $white;
+}
+
+.form-select {
+  font-size: 0.875rem;
+  border-radius: $border-radius-md;
+  background-color:rgba(245, 245, 245, 1);
+
+}
+
+.icon-text-container {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+.pin-icon {
+    margin-right: 8px;
+    color: #00aaff;
+}
+.flag{
+    border-radius: 50%;
+}

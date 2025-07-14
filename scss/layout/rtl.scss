@@ -1,0 +1,115 @@
+ // RTL Support
+html {
+  &[dir="ltr"] {
+    --text-align: left;
+    --margin-start: margin-left;
+    --margin-end: margin-right;
+    --padding-start: padding-left;
+    --padding-end: padding-right;
+    --border-start: border-left;
+    --border-end: border-right;
+    --start: left;
+    --end: right;
+  }
+
+  &[dir="rtl"] {
+    --text-align: right;
+    --margin-start: margin-right;
+    --margin-end: margin-left;
+    --padding-start: padding-right;
+    --padding-end: padding-left;
+    --border-start: border-right;
+    --border-end: border-left;
+    --start: right;
+    --end: left;
+  }
+}
+// RTL Specific Styles
+html[dir="rtl"] {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scaleX(-1);
+  }
+}
+ 
+ [dir="rtl"] {
+            direction: rtl;
+        }
+
+        
+        [dir="rtl"] .flash-offers-title::before {
+            margin-right: 0;
+            margin-left: var(--spacing-sm);
+        }
+         [dir="rtl"] .countdown-badge {
+            left: auto;
+            right: var(--spacing-sm);
+        }
+        
+        [dir="rtl"] .sale-badge {
+            left: auto;
+            right: var(--spacing-sm);
+        }
+
+        
+        [dir="rtl"] .flash-offer-badge {
+            right: auto;
+            left: var(--spacing-sm);
+        }
+             [dir="rtl"] .favorite-btn {
+            right: auto;
+            left: var(--spacing-sm);
+        }
+
+       
+
+// RTL/LTR mixins
+@mixin rtl {
+  [dir="rtl"] & {
+    @content;
+  }
+}
+
+@mixin ltr {
+  [dir="ltr"] & {
+    @content;
+  }
+}
+@mixin rtl {
+  [dir="rtl"] & {
+    @content;
+  }
+}
+
+
+@mixin rtl-property($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+  
+  @include rtl {
+    #{$property}: $rtl-value;
+  }
+}
+
+@mixin margin-horizontal($value) {
+  @include ltr {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  
+  @include rtl {
+    margin-left: $value;
+    margin-right: $value;
+  }
+}
+
+@mixin padding-horizontal($value) {
+  @include ltr {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  
+  @include rtl {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}

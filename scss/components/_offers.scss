@@ -1,0 +1,280 @@
+ :root {
+            --primar-color: #10b981;
+            --secondar-color: #f59e0b;
+            --dange-color: #ef4444;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --border-radius-lg: 16px;
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-md: 16px;
+            --font-size-lg: 18px;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --transition: all 0.3s ease;
+        }
+
+
+        /* RTL Support */
+        [dir="rtl"] {
+            direction: rtl;
+        }
+
+        /* Mixins equivalent using classes */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-start {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .card-shadow {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-shadow:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .transition-all {
+            transition: var(--transition);
+        }
+
+        /* Main Container */
+        .flash-offers-container {
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #F3F5F6;
+        }
+
+        .flash-offers-header {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .flash-offers-title {
+            font-size:32;
+            font-weight: 600;
+            color:#0E1114;
+            margin-bottom: var(--spacing-sm);
+        }
+
+
+        .flash-offers-nav {
+            gap: var(--spacing-md);
+        }
+
+        /* Cards Container */
+        .flash-offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        /* Card Component */
+        .flash-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .flash-card-image {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .flash-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .flash-card:hover .flash-card-image img {
+            transform: scale(1.05);
+        }
+
+        /* Badges */
+        .badge {
+            position: absolute;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            color: var(--white);
+            z-index: 10;
+        }
+
+        .countdown-badge {
+            top: var(--spacing-sm);
+            left: var(--spacing-sm);
+            background-color: var(--white);
+            color:#0E1114;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .sale-badge {
+            top: var(--spacing-sm);
+            left: 75px;
+            background-color:#FF8A59;
+        }
+
+        .flash-offer-badge {
+            bottom: var(--spacing-sm);
+            right: var(--spacing-sm);
+            background-color: #232323;
+            font-size: var(--font-size-xs);
+        }
+
+
+        /* Favorite Button */
+        .favorite-btn {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #F2F2F2;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 15;
+            &:hover, &.active {
+           background: #02C9C0;
+               color:white;
+        }
+    }
+        /* Card Content */
+        .flash-card-content {
+            padding: var(--spacing-md);
+                position: relative;
+           z-index: 999;
+    margin-top: -30px;
+    border-radius: 20px;
+        }
+
+        .brand-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-bottom: var(--spacing-sm);
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: var(--font-size-md);
+            font-weight: var(--font-weight-semibold);
+            color: #0E1114;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .card-description {
+            font-size: var(--font-size-sm);
+            color: #6E7887;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+        }
+
+        .discount-info {
+            background-color: #02C9C0;
+            color: var(--white);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-medium);
+            display: inline-block;
+        }
+        .old {
+            text-decoration: line-through;
+            color: #98A1AE;
+            font-size: 0.85rem;
+          }
+          .offer-btn{
+            background-color: white;
+      width: 50px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 72px;
+          }
+           .flash-offers-pizza{
+     display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: var(--spacing-lg);
+  }
+   .sale-badge-pizza {
+            top: var(--spacing-sm);
+            left: 5px;
+            background-color:#FF8A59;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .flash-offers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .flash-offers-nav {
+                gap: var(--spacing-sm);
+            }
+            
+            .nav-arrow {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .flash-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .flash-card:nth-child(1) { animation-delay: 0.1s; }
+        .flash-card:nth-child(2) { animation-delay: 0.2s; }
+        .flash-card:nth-child(3) { animation-delay: 0.3s; }
+    

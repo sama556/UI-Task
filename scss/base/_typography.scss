@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-md;
+}
+
+h1 { font-size: $font-size-5xl; }
+h2 { font-size: $font-size-4xl; }
+h3 { font-size: $font-size-3xl; }
+h4 { font-size: $font-size-2xl; }
+h5 { font-size: $font-size-xl; }
+h6 { font-size: $font-size-lg; }
+
+p {
+  margin-bottom: $spacing-md;
+  line-height: $line-height-normal;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+}
+
+a:hover,
+a:focus {
+  color: $offer-color; 
+  text-decoration: underline;
+}
