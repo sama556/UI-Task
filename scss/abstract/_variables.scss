@@ -4,7 +4,6 @@ $white: #ffffff;
 $black: #000000;
 $offer-section: #f3f5f6;
 $category-color:#F1F1F1;
-
 $main-font-color: #0e1114;
 $description-color: #6e7887;
 $main-color: #02c9c0;
@@ -17,6 +16,7 @@ $font-family-primary: "Montserrat-Arabic";
 
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
+$font-size-md: 0.900rem;
 $font-size-base: 1rem;
 $font-size-lg: 1.125rem;
 $font-size-xl: 1.25rem;
@@ -42,12 +42,14 @@ $line-height-tight: 1.25;
 $line-height-normal: 1.5;
 $line-height-loose: 1.75;
 
+$border-radius-sm: 0.25rem;
 $border-radius-md: 0.375rem;
 $border-radius-lg: 0.5rem;
 $border-radius-xlg: 6rem;
 
 
 $transition-fast: 0.2s ease-in-out;
+$transition: 0.2s ease-in-out;
 
 
     $card-border-radius: 16px;

@@ -123,9 +123,6 @@ html {
   @include card-hover-effect;
 }
 
-// =============================================
-// Components
-// =============================================
 .new-picks-section {
   padding: map-get($spacing, section-padding);
 
