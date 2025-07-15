@@ -362,8 +362,7 @@
 
         .cart-summary {
             padding: var(--spacing-lg);
-            border-top: 1px solid var(--offer-section);
-            background-color: var(--offer-section);
+            border-top: 2px solid var(--offer-section);
             flex-shrink: 0;
         }
 
@@ -488,6 +487,7 @@
             .cart-summary {
                 padding: var(--spacing-lg);
                 background-color: var(--white);
+                margin: 20px;
                 border-top: 1px solid var(--offer-section);
             }
 
